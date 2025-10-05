@@ -8,7 +8,7 @@ describe('Orange HRM Tests', () => {
     selectionTitleTopBar: ".oxd-topbar-header-breadcrumb-module",
     deshboadGrid: ".orangehrm-dashboard-grid",
     wrongCredentialAlert: "[role='alert']"                
-  }
+  } 
 
   it('Login - Success', () => {
     cy.visit(
@@ -21,8 +21,7 @@ describe('Orange HRM Tests', () => {
     cy.get(selectorsList.deshboadGrid)
   })
   it('Login - Fail', () => {
-    cy.visit(
-      'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'
+    cy.visit('/auth/login'
     )
     cy.get(selectorsList.usernameField).type(userData.userFail.username)
     cy.get(selectorsList.passwordField).type(userData.userFail.password)
