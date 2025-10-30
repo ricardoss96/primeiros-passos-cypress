@@ -1,16 +1,16 @@
-import userData from '../fixtures/users/userData.json'
+import userData from '../fixtures/userData.json'
 
 describe('Orange HRM Tests', () => {
   const selectorsList = {
-    usernameField: "]",
+    usernameField: "",
     passwordField: "",
-    loginButton: "",
+    loginButton: ".orangehrm-login-button",
     selectionTitleTopBar: "",
-    deshboadGrid: "",
+    deshboadGrid: ".oxd-layout-context",
     wrongCredentialAlert: ""                
   } 
 
-  it('Login - Success', () => {
+  it.only('User Info Update - Success', () => {
     cy.visit(
       '/auth/login'
     )
